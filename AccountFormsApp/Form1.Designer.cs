@@ -140,6 +140,7 @@
             this.btnWithdraw.TabIndex = 10;
             this.btnWithdraw.Text = "Withdrawal";
             this.btnWithdraw.UseVisualStyleBackColor = true;
+            this.btnWithdraw.Click += new System.EventHandler(this.btnWithdraw_Click);
             // 
             // accDeposit
             // 

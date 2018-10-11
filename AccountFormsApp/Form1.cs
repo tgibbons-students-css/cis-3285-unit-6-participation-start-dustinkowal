@@ -56,14 +56,22 @@ namespace AccountFormsApp
         {
             decimal deposit = Decimal.Parse(accDeposit.Text);
             string accountName = lbAccounts.SelectedItem.ToString();
-            decimal balance = accService.GetAccountBalance(accountName);
-
+            
             accService.Deposit(accountName, deposit);
 
+            decimal balance = accService.GetAccountBalance(accountName);
             accBalance.Text = balance.ToString();
+        }
 
+        private void btnWithdraw_Click(object sender, EventArgs e)
+        {
+            decimal withdraw = Decimal.Parse(accWithdraw.Text);
+            string accountName = lbAccounts.SelectedItem.ToString();
+            
+            accService.Withdrawal(accountName, withdraw);
 
-
+            decimal balance = accService.GetAccountBalance(accountName);
+            accBalance.Text = balance.ToString();
         }
     }
 }
