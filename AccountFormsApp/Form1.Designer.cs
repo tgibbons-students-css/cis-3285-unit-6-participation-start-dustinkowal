@@ -39,8 +39,8 @@
             this.lbAccounts = new System.Windows.Forms.ListBox();
             this.btnDeposit = new System.Windows.Forms.Button();
             this.btnWithdraw = new System.Windows.Forms.Button();
-            this.textBox1 = new System.Windows.Forms.TextBox();
-            this.textBox2 = new System.Windows.Forms.TextBox();
+            this.accDeposit = new System.Windows.Forms.TextBox();
+            this.accWithdraw = new System.Windows.Forms.TextBox();
             this.SuspendLayout();
             // 
             // label1
@@ -77,6 +77,7 @@
             this.btnAdd.TabIndex = 3;
             this.btnAdd.Text = "Add Account";
             this.btnAdd.UseVisualStyleBackColor = true;
+            this.btnAdd.Click += new System.EventHandler(this.btnAdd_Click);
             // 
             // accBalance
             // 
@@ -119,6 +120,7 @@
             this.lbAccounts.Name = "lbAccounts";
             this.lbAccounts.Size = new System.Drawing.Size(120, 147);
             this.lbAccounts.TabIndex = 8;
+            this.lbAccounts.SelectedIndexChanged += new System.EventHandler(this.lbAccounts_SelectedIndexChanged);
             // 
             // btnDeposit
             // 
@@ -128,6 +130,7 @@
             this.btnDeposit.TabIndex = 9;
             this.btnDeposit.Text = "Deposit";
             this.btnDeposit.UseVisualStyleBackColor = true;
+            this.btnDeposit.Click += new System.EventHandler(this.btnDeposit_Click);
             // 
             // btnWithdraw
             // 
@@ -138,27 +141,27 @@
             this.btnWithdraw.Text = "Withdrawal";
             this.btnWithdraw.UseVisualStyleBackColor = true;
             // 
-            // textBox1
+            // accDeposit
             // 
-            this.textBox1.Location = new System.Drawing.Point(397, 202);
-            this.textBox1.Name = "textBox1";
-            this.textBox1.Size = new System.Drawing.Size(100, 20);
-            this.textBox1.TabIndex = 11;
+            this.accDeposit.Location = new System.Drawing.Point(397, 202);
+            this.accDeposit.Name = "accDeposit";
+            this.accDeposit.Size = new System.Drawing.Size(100, 20);
+            this.accDeposit.TabIndex = 11;
             // 
-            // textBox2
+            // accWithdraw
             // 
-            this.textBox2.Location = new System.Drawing.Point(397, 231);
-            this.textBox2.Name = "textBox2";
-            this.textBox2.Size = new System.Drawing.Size(100, 20);
-            this.textBox2.TabIndex = 12;
+            this.accWithdraw.Location = new System.Drawing.Point(397, 231);
+            this.accWithdraw.Name = "accWithdraw";
+            this.accWithdraw.Size = new System.Drawing.Size(100, 20);
+            this.accWithdraw.TabIndex = 12;
             // 
             // Form1
             // 
             this.AutoScaleDimensions = new System.Drawing.SizeF(6F, 13F);
             this.AutoScaleMode = System.Windows.Forms.AutoScaleMode.Font;
             this.ClientSize = new System.Drawing.Size(800, 450);
-            this.Controls.Add(this.textBox2);
-            this.Controls.Add(this.textBox1);
+            this.Controls.Add(this.accWithdraw);
+            this.Controls.Add(this.accDeposit);
             this.Controls.Add(this.btnWithdraw);
             this.Controls.Add(this.btnDeposit);
             this.Controls.Add(this.lbAccounts);
@@ -190,8 +193,8 @@
         private System.Windows.Forms.ListBox lbAccounts;
         private System.Windows.Forms.Button btnDeposit;
         private System.Windows.Forms.Button btnWithdraw;
-        private System.Windows.Forms.TextBox textBox1;
-        private System.Windows.Forms.TextBox textBox2;
+        private System.Windows.Forms.TextBox accDeposit;
+        private System.Windows.Forms.TextBox accWithdraw;
     }
 }
 
