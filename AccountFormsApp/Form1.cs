@@ -61,6 +61,8 @@ namespace AccountFormsApp
 
             decimal balance = accService.GetAccountBalance(accountName);
             accBalance.Text = balance.ToString();
+
+            accDeposit.Text = "";
         }
 
         private void btnWithdraw_Click(object sender, EventArgs e)
@@ -72,6 +74,8 @@ namespace AccountFormsApp
 
             decimal balance = accService.GetAccountBalance(accountName);
             accBalance.Text = balance.ToString();
+
+            accWithdraw.Text = "";
         }
     }
 }

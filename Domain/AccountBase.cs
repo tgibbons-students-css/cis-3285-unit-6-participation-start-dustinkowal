@@ -41,8 +41,17 @@ namespace Domain
 
         public void AddTransaction(decimal amount)
         {
-            RewardPoints += CalculateRewardPoints(amount);
-            Balance += amount;
+            // if the amount is less than 0 it means it is a withdraw instead of a deposit
+            // if its a withdraw then no reward points are calculated
+            if (amount < 0)
+            {
+                Balance += amount;
+            }
+            else
+            {
+                RewardPoints += CalculateRewardPoints(amount);
+                Balance += amount;
+            }
         }
 
         public abstract int CalculateRewardPoints(decimal amount);
